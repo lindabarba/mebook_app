@@ -1,0 +1,13 @@
+<h1>Form for new user</h1>
+
+  <%= form_for @user, html: { multipart: true } do |form| %>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %><br>
+
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %><br>
+
+    <%= form.file_field :image %><br><br>
+
+    <%= form.submit 'Create User!' %>
+  <% end %>
