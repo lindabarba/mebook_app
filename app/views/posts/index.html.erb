@@ -1,1 +1,9 @@
 <h1>Posts</h1>
+
+<%= form_for :content do |text| %>
+  <%= text.label "What's on your mind..." %>
+  <%= text.text_field :content %>
+  <%= text.submit "POST" %>
+<% end %>
+
+<!-- show posts here -->

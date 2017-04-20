@@ -1,22 +1,21 @@
 class PostsController < ApplicationController
 
   def index
+    @posts = Post.all
+    @post = Post.new
   end
 
   def show
-    def show
-      @post = Post.new
-    end
+    @post = Post.new
   end
 
   def new
-    def new
-      @user = User.last
-      @post = Post.new
-    end
+    @user = User.all
+    @post = Post.new
   end
 
   def create
+    @user = User.all
     @post = Post.create(post_params)
     if @post.save
       redirect_to users_posts
